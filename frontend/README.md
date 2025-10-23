@@ -1,6 +1,6 @@
-# DatasetForge Frontend
+# IndicGlyph AI & OCR Frontend
 
-React + Tailwind application that provides the DatasetForge web console.
+React + Tailwind application that provides the IndicGlyph AI & OCR web console, powered by Taapset Technologies.
 
 ## Quick Start
 

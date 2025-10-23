@@ -1,12 +1,11 @@
-# DatasetForge – OCR & Annotation Platform Specification  
+# IndicGlyph AI and OCR Platform Specification (Powered by Taapset Technologies)
 **Version:** 1.0  
 **Owner:** [Satyasai Ray]  
 **Date:** [22-10-2025]  
 
 ---
 
-## 📘 Purpose  
-DatasetForge is a full-stack, mobile-first platform for curating multilingual OCR datasets.  
+IndicGlyph AI and OCR is a full-stack, mobile-first platform for curating multilingual OCR datasets, powered by Taapset Technologies.
 Admins upload and slice scanned pages; reviewers annotate text, translation, phonetics, and meaning.  
 Data routes through multiple reviewers, gaining “gold” or “reviewed” status and feeding exportable training datasets.
 

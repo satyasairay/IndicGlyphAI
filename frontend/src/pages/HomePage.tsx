@@ -30,7 +30,7 @@ const HomePage = () => {
       <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60">
         <h2 className="text-lg font-semibold text-slate-900">Platform Bootstrap Checklist</h2>
         <p className="mt-2 text-sm text-slate-600">
-          Cluster 1 establishes the foundations for DatasetForge. The checklist updates in real time
+          Cluster 1 establishes the foundations for IndicGlyph AI & OCR, powered by Taapset Technologies. The checklist updates in real time
           as services respond.
         </p>
       </div>

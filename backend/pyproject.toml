@@ -3,10 +3,10 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "datasetforge-backend"
+name = "indicglyph-backend"
 version = "0.1.0"
-description = "DatasetForge FastAPI backend service"
-authors = [{ name = "DatasetForge Team" }]
+description = "IndicGlyph AI & OCR FastAPI backend service powered by Taapset Technologies"
+authors = [{ name = "Taapset Technologies" }]
 dependencies = [
     "fastapi>=0.110.0",
     "uvicorn[standard]>=0.27.0",

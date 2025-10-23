@@ -1,6 +1,6 @@
-# DatasetForge Backend
+# IndicGlyph AI & OCR Backend
 
-FastAPI application that powers the DatasetForge OCR and annotation platform.
+FastAPI application that powers the IndicGlyph AI & OCR platform, proudly powered by Taapset Technologies.
 
 ## Local Development
 
