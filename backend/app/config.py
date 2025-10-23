@@ -28,7 +28,10 @@ class Settings(BaseSettings):
     s3_region: Optional[str] = Field(default="us-east-1", validation_alias="S3_REGION")
     s3_bucket: str = Field(default="datasetforge", validation_alias="S3_BUCKET")
 
-    cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:5173"], validation_alias="CORS_ORIGINS")
+    cors_origins: list[str] = Field(
+        default_factory=lambda: ["http://localhost:5173"],
+        validation_alias="CORS_ORIGINS",
+    )
     log_level: str = Field(default="INFO", validation_alias="LOG_LEVEL")
     version: str = Field(default="0.1.0", validation_alias="APP_VERSION")
 

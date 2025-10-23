@@ -3,14 +3,25 @@
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
-from sqlalchemy.ext.asyncio import AsyncEngine, AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy import text
+from sqlalchemy.ext.asyncio import (
+    AsyncEngine,
+    AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
+)
 
 from .config import get_settings
 
 
 def _create_engine() -> AsyncEngine:
     settings = get_settings()
-    return create_async_engine(settings.database_url, echo=settings.debug, future=True, pool_pre_ping=True)
+    return create_async_engine(
+        settings.database_url,
+        echo=settings.debug,
+        future=True,
+        pool_pre_ping=True,
+    )
 
 
 engine: AsyncEngine = _create_engine()
@@ -26,7 +37,7 @@ async def init_database() -> None:
     """
 
     async with engine.connect() as connection:
-        await connection.execute("SELECT 1")
+        await connection.execute(text("SELECT 1"))
 
 
 @asynccontextmanager

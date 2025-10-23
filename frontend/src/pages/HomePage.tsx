@@ -27,9 +27,9 @@ const HomePage = () => {
 
   return (
     <section className="space-y-6">
-      <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-6 shadow-lg">
-        <h2 className="text-lg font-semibold text-white">Platform Bootstrap Checklist</h2>
-        <p className="mt-2 text-sm text-slate-300">
+      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60">
+        <h2 className="text-lg font-semibold text-slate-900">Platform Bootstrap Checklist</h2>
+        <p className="mt-2 text-sm text-slate-600">
           Cluster 1 establishes the foundations for DatasetForge. The checklist updates in real time
           as services respond.
         </p>
@@ -53,9 +53,9 @@ const HomePage = () => {
         />
       </div>
 
-      <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-6 shadow-lg">
-        <h3 className="text-base font-semibold text-white">Runtime Settings Snapshot</h3>
-        {error && <p className="mt-2 text-sm text-red-400">Failed to load settings: {error}</p>}
+      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60">
+        <h3 className="text-base font-semibold text-slate-900">Runtime Settings Snapshot</h3>
+        {error && <p className="mt-2 text-sm text-rose-500">Failed to load settings: {error}</p>}
         {settings ? (
           <dl className="mt-4 grid gap-3 sm:grid-cols-2">
             <Entry label="App Name" value={settings.app_name} />
@@ -83,23 +83,23 @@ type ChecklistCardProps = {
 };
 
 const STATUS_STYLES: Record<ChecklistCardProps["status"], string> = {
-  Ready: "bg-emerald-500/10 text-emerald-300 border-emerald-500/40",
-  Pending: "bg-amber-500/10 text-amber-300 border-amber-500/40",
-  Error: "bg-rose-500/10 text-rose-300 border-rose-500/40",
+  Ready: "bg-emerald-50 text-emerald-600 border-emerald-200",
+  Pending: "bg-amber-50 text-amber-600 border-amber-200",
+  Error: "bg-rose-50 text-rose-600 border-rose-200",
 };
 
 const ChecklistCard = ({ title, description, status }: ChecklistCardProps) => {
   return (
-    <article className="rounded-lg border border-slate-800 bg-slate-900/70 p-5 shadow">
+    <article className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200">
       <div className="flex items-center justify-between">
-        <h4 className="text-base font-semibold text-white">{title}</h4>
+        <h4 className="text-base font-semibold text-slate-900">{title}</h4>
         <span
           className={`rounded-full border px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${STATUS_STYLES[status]}`}
         >
           {status}
         </span>
       </div>
-      <p className="mt-3 text-sm text-slate-300">{description}</p>
+      <p className="mt-3 text-sm text-slate-600">{description}</p>
     </article>
   );
 };
@@ -108,7 +108,7 @@ const Entry = ({ label, value }: { label: string; value: string }) => {
   return (
     <div>
       <dt className="text-xs uppercase tracking-widest text-slate-500">{label}</dt>
-      <dd className="text-sm font-medium text-slate-200">{value}</dd>
+      <dd className="text-sm font-medium text-slate-800">{value}</dd>
     </div>
   );
 };

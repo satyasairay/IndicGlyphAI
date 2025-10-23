@@ -7,7 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
 from app.db import init_database
-from app.routers import health, settings as settings_router
+from app.routers import health
+from app.routers import settings as settings_router
 
 
 def create_application() -> FastAPI:

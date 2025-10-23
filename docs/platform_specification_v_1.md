@@ -66,11 +66,11 @@ Each cluster is modular and scoped for sprint planning.
 - HTTPS setup  
 
 **QA Checklist:**
-- [ ] Containers build and deploy  
-- [ ] CI tests run on PR  
-- [ ] DB migrations apply cleanly  
-- [ ] .env loads per env  
-- [ ] HTTPS enforced in staging/prod  
+- [ ] Containers build and deploy *(blocked: local Docker CLI unavailable)*  
+- [x] CI tests run on PR  
+- [x] DB migrations apply cleanly  
+- [x] .env loads per env  
+- [x] HTTPS enforced in staging/prod  
 
 ---
 
@@ -378,4 +378,3 @@ class Config(BaseModel):
 ---
 
 End of Markdown Document.
-
